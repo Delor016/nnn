@@ -1,0 +1,2499 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct inline-block display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying audio without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body font-size is set using
+ *    em units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address outline inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside a element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting line-height on input using !important in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent text-transform inheritance for button and select.
+ * All other form control elements do not inherit text-transform values.
+ * Correct button style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct select style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native audio
+ *    and video controls.
+ * 2. Correct inability to style clickable input types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    input and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address appearance set to searchfield in Safari 5 and Chrome.
+ * 2. Address box-sizing set to border-box in Safari 5 and Chrome
+ *    (include -moz to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/montserrat-v26-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/montserrat-v26-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./fonts/montserrat-v26-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/montserrat-v26-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+*, *::before, *::after{
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Основные стили */
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    background: url('./img/about-bg.png');
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles start */
+.header {
+    background-color: #090909;
+    position: fixed; /* Фиксируем хеддер к верхней части экрана */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Устанавливаем высокий приоритет отображения */
+}
+
+.header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px;
+}
+.header__logo {
+    position: absolute;
+    left: 0;
+    top: 24px;
+}
+.header__second-image {
+    position: absolute;
+    left: 0;
+    margin-top: 34px;
+}
+.header__second-image-pic {
+    width: 100px; /* Измените размер изображения по желанию */
+}
+.header__text {
+    position: absolute;
+    left: 110px; /* Регулируйте расстояние от изображения */
+    top: 55px;  /* Регулируйте по вертикали */
+}
+.header__text-content {
+    font-size: 12px;
+    color: white;
+}
+.header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; /* Позволяем занять всё доступное пространство */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрируем элементы навигации */
+}
+
+.header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 28px; /* Равномерное расстояние между элементами */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.header__item {
+    margin-right: 0;
+    width: 100%; /* Занимает всю ширину контейнера */
+}
+.header__item:last-child {
+    margin-right: 0;
+}
+.header__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+    text-decoration: none;
+}
+.header__link:hover, .header__link:focus, .header__link:active {
+    opacity: .75;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.yandex-link {
+    color: #FF6868;
+}
+
+.yandex-link:hover {
+    text-decoration: underline;
+}
+
+.header__burger{
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+
+.burger__line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.burger__line_first {
+    top: 0;
+}
+.burger__line_second {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.burger__line_third {
+    bottom: 0;
+}
+
+
+/* Header styles end */
+
+/* Intro styles start */
+.intro {
+    height: 100vh;
+    background: url(./img/Back1.png) no-repeat center;
+    background-size: cover;
+    -webkit-transition: background-image 1s ease-in-out;
+    -o-transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out; /* Плавный переход для фона */
+}
+.intro.bg2 {
+    background-image: url(./img/Back2.png);
+}
+
+.intro.bg3 {
+    background-image: url(./img/Back3.png);
+}
+/* Intro styles end */
+.intro__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    width: 100%;                 /* Занимаем всю ширину экрана */
+    top: 28%;                   /* Отступ сверху */
+    color: white;
+    display: block;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Белое свечение */
+}
+
+.intro__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5); /* Белый цвет с прозрачностью 50% */
+    text-align: center;
+    max-width: 600px; /* Ограничение ширины текста */
+    line-height: 1.5; /* Межстрочное расстояние для читабельности */
+    position: relative;
+    top: 31%; /* Вместо 65% */
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); /* Убираем сдвиг по вертикали */
+
+    overflow-wrap: break-word; /* Позволяет переносить длинные слова */
+}
+.intro__button {
+    display: inline-block;
+    padding: 20px 100px; /* Увеличиваем кнопку (удлинение) */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff; /* Цвет текста */
+    background: -webkit-gradient(linear, left top, right top, from(#FF6868), to(#FF8C68));
+    background: -o-linear-gradient(left, #FF6868, #FF8C68);
+    background: linear-gradient(90deg, #FF6868, #FF8C68); /* Градиент от одного цвета к другому */
+    border-radius: 16px; /* Скругление углов изменено */
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    top: 36%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); /* Убираем сдвиг по вертикали */
+    -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+    -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease; /* Плавный переход для фона и свечения */
+    -webkit-box-shadow: 0 0 15px rgba(255, 104, 104, 0.6);
+            box-shadow: 0 0 15px rgba(255, 104, 104, 0.6); /* Свечение под кнопкой */
+}
+
+.intro__button:hover {
+    color: #843939; /* Изменение цвета текста при наведении */
+    background: -webkit-gradient(linear, left top, right top, from(#FF8C68), to(#FF6868));
+    background: -o-linear-gradient(left, #FF8C68, #FF6868);
+    background: linear-gradient(90deg, #FF8C68, #FF6868); /* Градиент при наведении */
+    -webkit-box-shadow: 0 0 25px rgba(255, 104, 104, 0.9);
+            box-shadow: 0 0 25px rgba(255, 104, 104, 0.9); /* Усиление свечения при наведении */
+}
+
+.header__contact-info {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    text-align: right;
+}
+
+
+.header__phone {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat */
+    font-size: 16px !important; /* Размер текста */
+    color: #FF6868; /* Цвет первого текста */
+    margin: 0; 
+    line-height: 0.8; 
+}
+
+.header__address {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat */
+    font-size: 16px !important; /* Размер текста */
+    color: white; /* Цвет текста */
+    opacity: 0.5; /* Прозрачность 50% */
+    margin: 0; 
+    line-height: 2; 
+}
+
+.header__link {
+    position: relative; /* Устанавливаем позицию относительно родителя */
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0; /* Добавляем отступы по вертикали */
+}
+
+.header__link::after {
+    content: ''; /* Создаем пустой контент для псевдоэлемента */
+    display: block; /* Делаем его блочным элементом */
+    height: 2px; /* Высота полоски */
+    background-color: #FF6868; /* Цвет полоски */
+    width: 0; /* Начальная ширина полоски */
+    -webkit-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease; /* Плавный переход ширины */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 50%; /* Центрируем полоску */
+    bottom: -5px; /* Располагаем ниже текста */
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); /* Центрируем полоску по горизонтали */
+}
+
+.header__link:hover::after {
+    width: 100%; /* Увеличиваем ширину полоски при наведении */
+}
+
+.header__phone-link {
+    color: #FF6868; /* Возвращаем прошлый цвет текста */
+    text-decoration: none; /* Убираем подчеркивание, если нужно */
+}
+
+.header__address a {
+    color: rgba(255, 255, 255, 0.5); /* Белый полупрозрачный */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.header__phone a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+
+.header__address a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.header__icon {
+    width: 13px; /* Размер иконки */
+    position: relative;
+    top: -2px;
+    margin-right: 2px; /* Отступ справа от иконки */
+    vertical-align: middle; /* Вертикальное выравнивание по центру текста */
+}
+
+.about-us {
+    background: url('./img/about-bg.png') no-repeat center; /* Фоновое изображение, без повторения, по центру */
+    background-size: cover; /* Изображение масштабируется, чтобы полностью покрыть секцию */
+    padding: 30px; /* Отступы сверху и снизу для простора */
+    color: white; /* Цвет текста */
+}
+
+.why-us {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.underline {
+    border-bottom: 3px solid #FF6868; /* Замените #FF5733 на нужный вам цвет */
+    } 
+
+
+.why-us-section {
+    text-align: right; /* Выравнивание текста вправо */
+}
+
+.red-text {
+    color: #FF6868; /* Цвет для чисел */
+    font-weight: bold; /* Сделать текст жирным (опционально) */
+}
+
+.text-container {
+    max-width: auto; /* Ограничиваем ширину */
+    margin-top: -26%;
+    margin-left: 73%; /* Сдвиг вправо */
+    padding-right: auto; /* Отступ от правого края */
+    line-height: 1.2; /* Увеличиваем расстояние между строками */
+
+}
+
+.text-container p {
+    font-size: 24px; /* Увеличиваем шрифт */
+    text-align: left; /* Выровнять текст по левой стороне */
+    margin: 0; /* Убираем отступы */
+}
+
+.text-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем flexbox для выравнивания */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Вертикальное центрирование иконок */
+    margin-bottom: 42px; /* Отступ между предложениями */
+}
+
+.icon {
+    margin-right: 25px; /* Отступ между иконкой и текстом */
+    width: 55px; /* Увеличиваем ширину иконки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.image-container {
+    width: 635px; /* Ширина контейнера изображений */
+    height: 359px; /* Высота контейнера изображений */
+    position: relative; /* Для абсолютного позиционирования стрелок */
+    overflow: hidden; /* Скрывает часть изображения, выходящую за пределы контейнера */
+    right: auto;
+    top: 50px;
+    border: none; /* Белая рамка */
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-radius: 16px; /* Закругление углов */
+}
+
+#imageDisplay {
+    width: 100%; /* Заполнение всего контейнера */
+    height: 100%; /* Заполнение всего контейнера */
+    -o-object-fit: cover;
+       object-fit: cover; /* Сохранение пропорций изображения */
+    -webkit-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;  /* Плавный переход для прозрачности */
+}
+
+
+.arrow-container {
+    position: absolute; /* Абсолютное позиционирование внутри контейнера */
+    top: 50%; /* Центрирование по вертикали */
+    width: 100%; /* Заполнение всей ширины контейнера */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем flexbox для расположения стрелок */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Разделяет стрелки по краям */
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); /* Центрирование по вертикали */
+}
+
+.arrow {
+    background-color: transparent; /* Полупрозрачный фон стрелок */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 24px; /* Размер шрифта для стрелок */
+    padding: 10px; /* Добавление отступов вокруг стрелок */
+    margin-left: 13px; /* Сдвигаем левую стрелку влево */
+    margin-right: 13px; /* Сдвигаем правую стрелку вправо */
+    border-radius: 120px; /* Скругление углов, можно менять значение для нужного эффекта */
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    width: 42px; /* Ширина кнопки */
+    height: 42px; /* Высота кнопки */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем flex для центрирования текста */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Вертикальное центрирование текста */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Горизонтальное центрирование текста */
+
+}
+
+.arrow:disabled {
+    background-color: transparent; /* Меняем цвет фона отключенных стрелок */
+    cursor: not-allowed; /* Изменение курсора при наведении на недоступные кнопки */
+
+}
+
+/* Пример изменения цвета при наведении для доступных стрелок */
+.arrow:not(:disabled):hover {
+    background-color: transparent; /* Меняем фон при наведении на доступные стрелки */
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+}
+
+
+.red-bold {
+    color: #FF6868;          /* Цвет текста для "1" */
+    font-weight: bold;   /* Жирный текст для "1" */
+    font-size: 24px;     /* Размер шрифта (можете изменить по желанию) */
+}
+
+/* Добавьте это в ваш файл style.css или в <style> в <head> */
+#imageCounter {
+position: relative;
+top: 390px;
+right: -580px;
+z-index: 10; 
+font-size: 24px;  
+}
+
+body {
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+}
+
+.catalog-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-top: 230px
+}
+
+/* Общий контейнер для кнопок и карточек */
+.catalog-container {
+    width: 100%; /* Ширина контейнера */
+    max-width: 1100px; /* Максимальная ширина для центровки */
+    margin: 0 auto; /* Выравнивание по центру */
+}
+
+/* Кнопки */
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Равномерное распределение кнопок */
+    margin-top: 70px;
+
+}
+
+.catalog-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+
+
+}
+
+.catalog-button:hover {
+    background-color: #45a049;
+}
+
+.catalog-button1 {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 3px solid #979797;
+    background-color: transparent;
+    color: #979797;
+    border-radius: 16px;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    width: 32%; /* Ширина кнопок совпадает с карточками */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.catalog-button1.active {
+    border: 3px solid #FF6868; /* Красная обводка */
+    color: #FF6868; /* Красный текст */
+}
+
+.catalog-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left; /* Распределить карточки по центру */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Вертикальное выравнивание */
+    gap: 20px; /* Отступы между карточками */
+    flex-wrap: wrap;
+    
+}
+
+.card {
+	position: relative;
+    text-align: center; /* Центрирует текст внутри кнопки */
+    border-radius: 16px;
+    width: 32%;
+    background-color: white;
+    padding: 0;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 400px !important; /* Фиксированная высота карточек */
+    overflow: hidden; /* Скрываем содержимое, выходящее за границы */
+
+    height: 100%; /* Карточка занимает всю доступную высоту */
+}
+
+.deleteCardButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 0, 0, 0.8); /* Полупрозрачный красный фон */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 10; /* Устанавливаем высокий z-index для видимости поверх контента */
+}
+
+
+.card img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 35%; /* Задаем фиксированную высоту для изображения */
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; /* Заставляет контент занимать доступное пространство */
+    max-height: 50%; /* Ограничиваем высоту блока с текстом */
+    min-height: 50%; /* Фиксированная высота для выравнивания */
+    overflow: hidden; /* Обрезаем текст, если он выходит за границы */
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    color: black; /* Черный цвет заголовка */
+    font-weight: bold;
+}
+
+.card-content p {
+    margin: 0 0 20px;
+    color: #555;
+    font-family: 'Arial', sans-serif; /* Шрифт для описания */
+    font-size: 16px;
+    min-height: 80px; /* Фиксированная высота для выравнивания описания */
+
+}
+
+.card .catalog-button {
+    margin: 0 auto 20px auto; /* Центрирование кнопки */
+    padding: 10px 0;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card .catalog-button:hover {
+    background-color: black; /* Черная заливка при наведении */
+    color: white; /* Белый текст при наведении */
+}
+
+.card h3 {
+    font-weight: bold; /* Жирный шрифт для заголовка */
+    color: black; /* Черный цвет текста */
+    text-align: center; /* Центрирование текста */
+}   
+
+.card-group {
+    display: none; /* Все группы карточек скрыты по умолчанию */
+}
+
+.card-group.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Показывать активную группу */
+}
+
+.reviews-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.underline {
+    border-bottom: 3px solid #FF6868;
+    display: inline-block;
+}
+
+.reviews-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 200px; /* Отступ для заголовка */
+
+}
+
+.reviews-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрируем карточки */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центрируем кнопки по вертикали */
+    margin-top: 70px; /* Отступ сверху для контейнера отзывов */
+    gap: 0; /* Отступ между карточками */
+    position: relative; /* Для абсолютного позиционирования карточек */
+    width: 100%;
+}
+
+.review-card {
+    margin: auto; /* Убираем отступы у карточек */
+    background-color: #ffffff; /* Белый фон карточки */
+    border: none; /* Уберите тени или рамки */
+    padding: 13px; /* Отступ внутри карточки */
+    border-radius: 8px; /* Закругление углов */
+    -webkit-box-shadow: none;
+            box-shadow: none; /* Убираем тени */
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; /* Каждая карточка займет равное пространство */
+    margin: 20px; /* Увеличиваем отступ между карточками */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 160px;
+    opacity: 0;
+    width: 31%;
+    z-index: 1;
+    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    -o-transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease; /* Плавный переход */
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); /* Начальная позиция */
+}
+
+.review-card.left {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%); /* Прокрутка влево */
+}
+
+.review-card.right {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%); /* Сдвиг вправо */
+}
+
+.review-card.show {
+    opacity: 1; /* Показываем карточки */
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); /* Возвращаем на место */
+}
+
+.review-card.active {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); /* Увеличиваем центральный отзыв */
+}
+
+
+.review-avatar {
+    width: 40px; /* Размер аватарки */
+    height: 40px; /* Размер аватарки */
+    border-radius: 50%; /* Закругленная аватарка */
+    margin-right: 15px; /* Отступ справа от аватарки */
+}
+
+.review-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; /* Заполняет оставшееся пространство */
+}
+
+.review-name {
+    font-weight: bold; /* Жирный шрифт для имени */
+    margin: 0; /* Убираем отступы */
+    color: black;
+    font-size: 14px;
+}
+.review-stars {
+    display: inline-block; /* Звёзды под именем */
+    margin-top: 3px; /* Отступ сверху */
+}
+
+.review-date {
+    font-size: 11px; /* Мелкий шрифт для даты */
+    color: gray; /* Цвет текста даты */
+    margin-left: 10px; /* Отступ слева от даты */
+    float: right; /* Выровнять по правому краю */
+    padding-top: 6px;
+}
+
+
+.review-text {
+    margin-top: 5px; /* Отступ сверху для текста отзыва */
+    color: black; /* Цвет текста отзыва */
+    margin-left: -55px; /* Отступ слева для выравнивания под аватаркой */
+    font-size: 16px;
+}
+.reviews-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем flexbox для размещения кнопок */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Размещаем кнопки вертикально */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрируем кнопки по вертикали */
+    margin: 0; /* Убираем отступы */
+
+}
+
+.nav-button {
+    background-color: transparent; /* Полупрозрачный фон стрелок */
+    padding: 0; /* Убираем отступы для кнопки */
+    margin: 0; /* Убираем отступы между кнопками */
+    cursor: pointer; /* Указатель при наведении */
+    background-color: transparent; /* Фон кнопок */
+    border: none; /* Убираем рамки */
+    z-index: 1;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    width: 42px; /* Ширина кнопки */
+    height: 42px; /* Высота кнопки */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем flex для центрирования содержимого */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Вертикальное центрирование содержимого */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Горизонтальное центрирование содержимого */
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+}
+
+/* Тень при наведении для левой кнопки */
+.nav-button.left:hover {
+    -webkit-box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Тень при наведении для правой кнопки */
+.nav-button.right:hover {
+    -webkit-box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5); /* Смещаем тень влево */
+}
+
+/* Стили для отключенной кнопки */
+.nav-button:disabled {
+    cursor: not-allowed; /* Изменяем курсор при наведении */
+    opacity: 0.25; /* Уменьшаем непрозрачность для визуального эффекта */
+    -webkit-box-shadow: none;
+            box-shadow: none; /* Убираем тень для отключенной кнопки */
+}
+
+/* Убираем эффект наведения для отключенной кнопки */
+.nav-button:disabled:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none; /* Убираем тень при наведении на отключенную кнопку */
+    background-color: transparent; /* Убираем фон при наведении */
+}
+
+footer {
+    background-color: #080808; /* Цвет фона футера */
+    padding: 40px 0; /* Увеличенные отступы по вертикали */
+    width: 100%; /* Ширина футера 100% */
+    position: relative; /* Позволяет управлять позиционированием */
+    left: 0; /* Сдвигает футер влево */
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 1110px; /* Максимальная ширина для текста */
+    margin: 0 auto; /* Центрирует текст внутри футера */
+    padding: 0 15px; /* Отступы слева и справа для текста */
+    text-align: left; /* Выровнять текст влево */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.footer-header {
+    text-align: center; /* Центрирует текст заголовка */
+    color: #FFFFFF; /* Цвет текста заголовка */
+    font-size: 24px; /* Размер шрифта для заголовка */
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    margin-top: 40px; /* Отступ сверху для заголовка */
+    font-weight: 700; /* Жирность текста заголовка */
+    position: relative; /* Позволяет использовать псевдоэлемент */
+}
+
+.footer-header::after {
+    content: ""; /* Создает пустой элемент */
+    display: block; /* Делает элемент блочным */
+    width: 14%; /* Ширина подчеркивания */
+    height: 3px; /* Высота подчеркивания */
+    background-color: #FF6868; /* Цвет подчеркивания */
+    margin: 0px auto 0; /* Уменьшаем отступ сверху */
+}
+.footer-section {
+    margin-bottom: 20px; /* Отступы между секциями */
+}
+
+.footer-section.address {
+    margin-left: 300px; /* Добавляем отступ слева для секции адреса */
+    margin-top: -153px;
+}
+
+.footer-section.contact {
+    margin-left: 300px; /* Добавляем отступ слева для секции связи */
+    margin-top: -135px;
+}
+
+.footer-title {
+    font-weight: 400; /* Немного меньше жирность */
+    color: #FFFFFF; /* Белый цвет заголовков */
+    margin-top: 80px; /* Добавляем отступ сверху для заголовков */
+    margin-bottom: 15px; /* Добавляем отступ снизу */
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.5); /* Белый цвет текста с прозрачностью 50% */
+}
+
+.footer-phone {
+    color: #FF6868; /* Красный цвет для номера телефона */
+}
+
+.footer-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем флекс для горизонтального расположения */
+    gap: 10px; /* Отступ между иконками */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+.footer-icon {
+    width: 24px; /* Устанавливаем ширину иконок */
+    height: auto; /* Высота автоматически пропорциональна ширине */
+}
+
+.footer-map {
+    max-width: 100%; /* Карта занимает оставшееся место */;
+    margin-left: 570px;
+    margin-top: -240px;
+    overflow: hidden; /* Чтобы скрыть углы карты за скруглением */
+    border-radius: 16px; /* Скругление углов */
+}
+
+#why_me, #catalog, #reviews {
+    scroll-margin-top: 200px; /* Устанавливаем отступ, равный высоте хедера */
+}
+
+.scroll-down {
+    position: absolute;      /* Позиционирование внутри секции */
+    bottom: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    cursor: pointer;
+    -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateX(-50%) translateY(0);
+                transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        -webkit-transform: translateX(-50%) translateY(-10px);
+                transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateX(-50%) translateY(-5px);
+                transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateX(-50%) translateY(0);
+                transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        -webkit-transform: translateX(-50%) translateY(-10px);
+                transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateX(-50%) translateY(-5px);
+                transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.scroll-down {
+    /* ваши другие стили */
+    outline: none; /* Убираем стандартное обводка при фокусе */
+}
+
+.scroll-down:focus {
+    outline: none; /* Убираем обводка при фокусе */
+}
+
+html, body {
+    overflow-x: hidden; /* Отключаем горизонтальный скролл */
+    max-width: 100%; /* Ограничиваем ширину */
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+/* ----------РАБОТАЕТ----------------------------------ПЛАНШЕТЫ 960------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 960px) {
+    .header__burger {
+        display: block;
+        right: -51.5%;
+    }
+    .header__nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 10;
+        padding: 75px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; /* Центрируем содержимое */
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+        -webkit-transition: .2s all linear;
+        -o-transition: .2s all linear;
+        transition: .2s all linear;
+    }
+    .header__nav_active{
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
+    .header__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; /* Установите flex для списка */
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; /* Выстраивайте элементы по вертикали */
+        gap: 35px; /* Установите отступ между элементами */
+        padding: 0; /* Уберите отступы */
+        margin: 0; /* Уберите маргины */
+    }
+    .header__item {
+        width: 100%; /* Занимает всю ширину контейнера */
+        text-align: center; /* Центрируем текст */
+    }
+    .header__link {
+        display: block; /* Сделайте ссылки блочными */
+        font-size: 24px;
+    }
+    .header__contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Вертикальное расположение */
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; /* Запретите перенос строк */
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; /* Выровнять содержимое по левому краю */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрируем по вертикали, если это нужно */
+    position: absolute; /* Установите абсолютное позиционирование */
+    top: 5%; /* Регулируйте отступ сверху */
+    left: 5%; /* Установите отступ слева для нужного расстояния */
+    }
+    .header__phone, .header__address {
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: left; /* Выровнять текст по левому краю */
+        white-space: nowrap; /* Предотвращает перенос текста */
+        font-size: 17px !important;
+    }
+
+    .header__nav-close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 11;
+    }
+    .header__nav-close-line{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+    }
+    .header__nav-close-line:first-child{
+        -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-close-line:last-child{
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+            -ms-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
+    }
+    .about-us {
+        padding: 20px; /* Уменьшаем отступы для малых экранов */
+    }
+
+    .why-us {   
+        font-size: 32px; /* Уменьшаем размер заголовка */
+        text-align: center; /* Центрируем заголовок */
+    }
+
+    #imageCounter {
+        text-align: right; /* Центрируем счетчик изображений */
+        z-index: 1; /* Убедитесь, что текст над изображениями */
+        position: relative; /* Устанавливаем относительное позиционирование */
+        right: 20px;
+        top: 580px;
+    }
+
+    .text-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin: 150px 0 0; /* Увеличиваем верхний отступ */
+        position: relative;
+        top: -450px; /* Поднимаем текст выше */
+ 
+    }
+
+    .text-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Иконки над текстом */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центрируем иконки и текст по горизонтали */
+    text-align: center; /* Центрируем текст внутри элемента */
+    width: 30%; /* Занимаем фиксированную ширину */
+    margin: 0 auto; /* Центрируем сам элемент */
+}
+
+.text-item p {
+    margin: 0; /* Убираем отступы у текста */
+    text-align: center; /* Центрируем текст */
+    font-size: clamp(12px, 3.5vw, 24px);
+}
+
+.text-item img {
+    height: 60px; /* Задайте фиксированную высоту для всех иконок */
+    width: clamp(30px, 10vw, 60px); /* Адаптивная ширина иконок */
+    margin: 0 auto 20px; /* Убираем левый отступ и центрируем */
+    display: block; /* Убедитесь, что иконка ведет себя как блочный элемент */
+}
+
+
+    .image-container {
+        width: 100%; /* Занимаем всю ширину экрана */
+        height: 350px; /* Высота контейнера изображений */
+        margin: 0 auto; /* Центрируем контейнер */
+        position: relative; /* Для позиционирования текста поверх изображения */
+        overflow: hidden; /* Скрывает часть изображения, выходящую за пределы контейнера */
+        top: 250px; /* Опускаем слайдер вниз */
+    }
+
+    #imageDisplay {
+        width: 100%; /* Заполнение всего контейнера */
+        height: 100%; /* Заполнение всего контейнера */
+        -o-object-fit: cover;
+           object-fit: cover; /* Сохранение пропорций изображения */
+        -webkit-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;  /* Плавный переход для прозрачности */
+    }
+
+    .catalog-title {
+        font-size: clamp(24px, 8vw, 32px); /* Адаптивный размер заголовка */
+        margin-top: 125px
+    }
+    
+    .catalog-cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; /* Равномерное распределение карточек */
+        gap: 20px; /* Отступы между карточками */
+    }
+
+    .card {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 calc(32% - 10px);
+                flex: 1 1 calc(32% - 10px); /* Адаптивная ширина карточки */
+        max-width: 32%; /* Максимальная ширина карточки */
+        min-width: 250px; /* Минимальная ширина для поддержки маленьких экранов */
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    }
+    
+    .card-content h3 {
+        font-size: clamp(14px, 4vw, 16px); /* Адаптивный размер заголовка карточки */
+    }
+
+    .card-content p {
+        font-size: clamp(14px, 4vw, 16px); /* Адаптивный размер описания */
+    }
+
+        .review-card {
+        padding: 15px; /* Опционально: регулируйте внутренние отступы в самих отзывах */
+    }
+    
+    .review-avatar {
+        width: 40px; /* Уменьшаем аватар */
+        height: 40px;
+        margin-right: 15px; /* Убираем отступ справа */
+        margin-bottom: 0; /* Добавляем отступ снизу */
+        margin-left: 0px;
+    }
+
+
+    .review-name {
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+    .reviews-title{
+        font-size: 32px;
+    }
+    .review-date {
+        font-size: 10px !important; /* Уменьшаем размер текста для даты */
+        margin: 0; /* Убираем лишние отступы */
+    }
+
+    .review-stars {
+        margin: 4px 0; /* Небольшой отступ сверху и снизу */
+    }
+
+    .review-text {
+        font-size: 14px; /* Уменьшаем размер текста отзыва */
+        margin-top: 5px; /* Добавляем отступ сверху */
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+
+
+    .footer-section {
+        margin-left: 20%; /* Убираем левый отступ для всех секций */
+    }
+
+    .footer-section.address {
+    margin-left: 60%; /* Добавляем отступ слева для секции адреса */
+}
+
+.footer-section.contact {
+    margin-left: 60%; /* Добавляем отступ слева для секции связи */
+}
+    .footer-map {
+        margin: 90px auto auto; /* Устанавливаем отступ сверху, центрируем карту и добавляем отступ снизу */
+        max-width: 70%; /* Убираем максимальную ширину */
+        height: 250px; /* Устанавливаем фиксированную высоту для карты */
+    }
+    .catalog-button1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; /* Используем Flexbox для кнопок */
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; /* Центрируем по горизонтали */
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; /* Центрируем по вертикали */
+        padding: clamp(8px, 2vw, 12px); /* Адаптивные отступы */
+        font-size: clamp(18px, 3vw, 22px); /* Адаптивный размер текста кнопки внутри карточек */
+        cursor: pointer;
+        border: 2px solid #979797;
+        background-color: transparent;
+        color: #979797;
+        border-radius: 16px;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+        -o-transition: background-color 0.3s, color 0.3s;
+        transition: background-color 0.3s, color 0.3s;
+        max-width: 100%; /* Обеспечиваем максимальную ширину 100% */
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+        white-space: nowrap; /* Запрещаем перенос текста */
+        margin-top: auto; /* Центрирование кнопки по вертикали внутри карточки */
+    }
+
+    /* Кнопки */
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Равномерное распределение кнопок */
+    margin-top: 70px;
+}
+.footer-header::after {
+    width: 16%;
+}
+
+}
+
+
+
+
+
+
+
+
+/* ---------------РАБОТАЕТ--------------------------------------------ПЛАНШЕТЫ 768 НАЧАЛО---------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+    
+    .catalog-cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; /* Равномерное распределение карточек */
+        gap: 20px; /* Отступы между карточками */
+    }
+
+    .card {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 calc(50% - 10px);
+                flex: 1 1 calc(50% - 10px); /* Адаптивная ширина карточки */
+        max-width: 48%; /* Максимальная ширина карточки */
+        min-width: 48%; /* Минимальная ширина для поддержки маленьких экранов */
+        height: 400px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    }
+    
+    .card-content h3 {
+        font-size: clamp(14px, 4vw, 18px); /* Адаптивный размер заголовка карточки */
+    }
+
+    .card-content p {
+        font-size: clamp(14px, 4vw, 17px); /* Адаптивный размер описания */
+    }
+
+    .card .catalog-button {
+        font-size: clamp(12px, 3vw, 20px) !important;
+        margin-top: auto; /* Размещает кнопку в нижней части карточки */
+        margin-bottom: 20px !important; /* Добавляет пространство от нижней границы карточки */
+    }
+
+    .footer-section {
+        margin-left: -30%; /* Убираем левый отступ для всех секций */
+        text-align: center;
+    }
+
+    .footer-section.address {
+    margin-left: 30%; /* Добавляем отступ слева для секции адреса */
+    text-align: center;
+}
+
+.footer-section.contact {
+    margin-left: 30%; /* Добавляем отступ слева для секции связи */
+}
+
+.footer-icons {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; /* Используйте inline-flex для сохранения в одной строке */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+}
+
+    .footer-map {
+        margin: 90px auto auto; /* Устанавливаем отступ сверху, центрируем карту и добавляем отступ снизу */
+        max-width: 70%; /* Убираем максимальную ширину */
+        height: 250px; /* Устанавливаем фиксированную высоту для карты */
+    }
+    .footer-header::after {
+    width: 150px !important;
+}
+}
+
+
+
+
+
+
+/* ---------------РАБОТАЕТ--------------------------------------------НОУТБУКИ НАЧАЛО---------------------------------------------------------------------------------------- */
+/* ДЛЯ 1024 и 1080 НОУТОВ */
+@media screen and (max-width: 1080px) {
+
+.card {
+	width: 31%;
+
+}
+
+.catalog-cards {
+
+justify-content: space-between
+}
+
+.catalog-button1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем Flexbox для кнопок */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрируем по горизонтали */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центрируем по вертикали */
+    padding: clamp(8px, 2vw, 12px); /* Адаптивные отступы */
+    font-size: clamp(12px, 3vw, 18px); /* Адаптивный размер текста кнопки внутри карточек */
+    cursor: pointer;
+    border: 3px solid #979797;
+    background-color: transparent;
+    color: #979797;
+    border-radius: 16px;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 100%; /* Обеспечиваем максимальную ширину 100% */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    margin-top: auto; /* Центрирование кнопки по вертикали внутри карточки */
+    }
+    
+.card .catalog-button {
+    width: 250px;
+    font-size: clamp(12px, 3vw, 16px); /* Адаптивный размер текста */
+    display: block; /* Убедитесь, что кнопка является блочным элементом */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    }
+
+.review-avatar {
+    width: 30px; /* Уменьшаем размер аватарки */
+    height: 30px;
+    margin-right: 10px; /* Уменьшаем отступ справа */
+}
+
+.review-name {
+    font-size: 14px; /* Уменьшаем размер текста для имени */
+}
+
+.review-stars {
+    margin-top: 2px; /* Корректируем отступ */
+}
+
+.review-date {
+    font-size: 9px;
+    margin-left: -200px;
+    text-align: right;
+    width: 60px; /* Задаем фиксированную ширину */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden; /* Скрываем излишки текста */
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
+}
+.review-text {
+    margin-left: -40px; /* Корректируем отступ для текста */
+    font-size: 14px !important;
+}
+
+.reviews-navigation {
+    margin-top: 10px; /* Увеличиваем отступ сверху */
+}
+
+.nav-button {
+    display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------ТЕЛЕФОНЫ НАЧАЛО---------------------------------------------------------------------------------------- */
+/* ДЛЯ ТЕЛЕФОНОВ */
+@media screen and (max-width: 480px) {
+
+    .intro__title {
+        font-size: clamp(15px, 11vw, 64px); 
+    }
+    .intro__subtitle {
+        font-size: clamp(12px, 3.5vw, 20px); 
+    }
+    .intro__button {
+        font-size: clamp(12px, 3.5vw, 20px); /* Адаптивный размер текста */
+    }
+
+.text-container {
+    display: block; /* Убираем флекс, чтобы элементы располагались друг под другом */
+    margin: 150px 0 0; /* Увеличиваем верхний отступ */
+    position: relative;
+    top: -410px; /* Поднимаем текст выше */
+}
+
+.text-container p {
+    text-align: center !important;
+    font-size: 26px; /* Увеличиваем шрифт */
+    text-align: left; /* Выровнять текст по левой стороне */
+    margin: 0; /* Убираем отступы */
+}
+
+.text-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Иконки над текстом */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центрируем иконки и текст по горизонтали */
+    text-align: center; /* Центрируем текст внутри элемента */
+    width: 50%; /* Увеличиваем ширину элемента */
+    padding: 10px; /* Добавляем внутренние отступы */
+    margin: 45px auto; /* Увеличиваем отступы между элементами и центрируем элемент */
+}
+
+.icon {
+    width: 100px !important; /* Увеличиваем ширину иконки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.image-container {
+        width: 100%; /* Занимаем всю ширину экрана */
+        height: 300px; /* Высота контейнера изображений */
+        margin: 0 auto; /* Центрируем контейнер */
+        position: relative; /* Для позиционирования текста поверх изображения */
+        overflow: hidden; /* Скрывает часть изображения, выходящую за пределы контейнера */
+        top: 700px; /* Опускаем слайдер вниз */
+    }
+
+#imageCounter {
+    font-size: 16px;
+        text-align: right; /* Центрируем счетчик изображений */
+        z-index: 1; /* Убедитесь, что текст над изображениями */
+        position: relative; /* Устанавливаем относительное позиционирование */
+        right: 20px;
+        top: 985px;
+    }
+
+.catalog-button1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Используем Flexbox для кнопок */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрируем по горизонтали */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центрируем по вертикали */
+    padding: clamp(8px, 2vw, 12px); /* Адаптивные отступы */
+    font-size: clamp(15px, 3vw, 18px); /* Адаптивный размер текста кнопки внутри карточек */
+    cursor: pointer;
+    border: 2px solid #979797;
+    background-color: transparent;
+    color: #979797;
+    border-radius: 16px;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 100%; /* Обеспечиваем максимальную ширину 100% */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    margin-top: auto; /* Центрирование кнопки по вертикали внутри карточки */
+    }  
+
+    .footer-header::after {
+    width: 33%;
+}
+
+.card {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 calc(50% - 10px);
+                flex: 1 1 calc(50% - 10px); /* Адаптивная ширина карточки */
+        max-width: 47%; /* Максимальная ширина карточки */
+        min-width: 47%; /* Минимальная ширина для поддержки маленьких экранов */
+        height: 350px !important;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    }
+    
+    .card-content h3 {
+        font-size: clamp(12px, 4vw, 14px); /* Адаптивный размер заголовка карточки */
+        text-align: left;
+    }
+
+    .card-content p {
+        font-size: clamp(12px, 4vw, 12px); /* Адаптивный размер описания */
+        margin: 0 0 0px;
+        min-height: 5px;
+        text-align: left;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+    }
+
+
+    .card .catalog-button {
+        font-size: clamp(14px, 3vw, 14px) !important;
+        width: 150px;
+    }
+
+
+    .review-card {
+        height: 180px;
+        width: 220px;
+        margin: 10px;
+    }
+
+    .review-text {
+        font-size: clamp(12px, 3vw, 14px);
+        display: -webkit-box;
+    -webkit-line-clamp: 7; /* Ограничивает текст тремя строками */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+
+    }
+
+    .review-name {
+    font-weight: bold;
+    margin: 0;
+    color: black;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+    .review-date {
+    font-size: 9px;
+    margin-left: 100px;
+    margin-top: -46px;
+    text-align: right;
+    width: 60px; /* Задаем фиксированную ширину */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden; /* Скрываем излишки текста */
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
+    }
+
+    .footer-map {
+        margin: 90px auto auto; /* Устанавливаем отступ сверху, центрируем карту и добавляем отступ снизу */
+        max-width: 100%; /* Убираем максимальную ширину */
+        height: 190px; /* Устанавливаем фиксированную высоту для карты */
+    }
+
+
+    .footer-section {
+        margin-left: -55%; /* Убираем левый отступ для всех секций */
+        text-align: center;
+    }
+
+    .footer-section.address {
+    margin-left: 50%; /* Добавляем отступ слева для секции адреса */
+    text-align: center;
+}
+
+.footer-section.contact {
+    margin-left: 50%; /* Добавляем отступ слева для секции связи */
+}
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .intro__subtitle {
+        font-size: 16px;
+    }
+
+    .intro__button {
+        font-size: 16px;
+    }
+
+    .image-container {
+        top: 800px;
+    }
+
+    #imageCounter {
+        top: 1080px;
+    }
+
+    .catalog-button1 {
+    font-size: clamp(11px, 3vw, 11px); /* Адаптивный размер текста кнопки внутри карточек */
+    }  
+
+    .card {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 calc(50% - 10px);
+                flex: 1 1 calc(50% - 10px); /* Адаптивная ширина карточки */
+        max-width: 47%; /* Максимальная ширина карточки */
+        min-width: 47%; /* Минимальная ширина для поддержки маленьких экранов */
+        height: 300px !important;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    }
+    
+    .card-content h3 {
+        font-size: clamp(12px, 4vw, 12px); /* Адаптивный размер заголовка карточки */
+        text-align: left;
+    }
+
+    .card-content p {
+        font-size: clamp(12px, 4vw, 12px); /* Адаптивный размер описания */
+        margin: 0 0 0px;
+        min-height: 5px;
+        text-align: left;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+    }
+
+    .card img {
+        height: 27%;
+    }
+
+    .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Распределяет элементы равномерно по вертикали */
+    height: 100%; /* Заставит карточку растянуться */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* Для учета паддингов в высоте */
+    position: relative;
+    }
+.card .catalog-button {
+    margin-top: auto; /* Размещает кнопку в нижней части карточки */
+    margin-bottom: 20px; /* Добавляет пространство от нижней границы карточки */
+    width: 70%;
+    font-size: 14px !important;
+    border-radius: 8px;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+    .review-card {
+    	height: 150px;
+        width: 22% !important;
+        margin: 0.5%;
+    }
+.review-name {
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    max-width: 70px;
+
+}
+
+.review-stars {
+    width: 80px;
+    height: 13px;
+}
+
+.review-text {
+    font-size: clamp(9px, 3vw, 12px) !important;
+    margin-top: 0px;
+    margin-left: -40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Ограничивает текст тремя строками */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+}
+
+.review-date {
+    display: none;
+}
+
+.footer-map {
+    margin: 90px auto auto; /* Устанавливаем отступ сверху, центрируем карту и добавляем отступ снизу */
+    max-width: 100%; /* Убираем максимальную ширину */
+    height: 190px; /* Устанавливаем фиксированную высоту для карты */
+}
+
+.footer-header::after {
+    width: 50%;
+}
+
+    .footer-section {
+        margin-left: -50%; /* Убираем левый отступ для всех секций */
+        text-align: center;
+        font-size: 13px;
+    }
+
+.footer-section.address {
+    position: absolute;
+    top: 265px;
+    right: 4%; /* Процент от ширины экрана */
+    text-align: center;
+}
+
+.footer-section.contact {
+    position: absolute;
+    top: 390px;
+    right: 15%; /* Устанавливаем отступ справа */
+    text-align: center;
+}
+
+.footer-icons {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; /* Используйте inline-flex для сохранения в одной строке */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+}
+
+.footer {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Центрирует элементы */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; /* Адаптирует содержимое при уменьшении разрешения */
+    padding: 20px;
+}
+
+}
+
+.add-card-buttons {
+    position: fixed; /* Заставляет контейнер кнопок оставаться на месте */
+    top: 20px; /* Расположение сверху */
+    right: 20px; /* Расположение справа */
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы кнопки были поверх других элементов */
+    display: flex; /* Используем flexbox для размещения кнопок */
+    gap: 10px; /* Отступы между кнопками */
+}
+
+.add-card-button {
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.add-card-button:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
+}
+
+
+@media screen and (max-width: 375px) {
+	.card {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 calc(50% - 10px);
+                flex: 1 1 calc(50% - 10px); /* Адаптивная ширина карточки */
+        max-width: 46%; /* Максимальная ширина карточки */
+        min-width: 46%; /* Минимальная ширина для поддержки маленьких экранов */
+        height: 300px !important;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+    }
+    
+    .card .catalog-button {
+        font-size: clamp(14px, 3vw, 14px) !important;
+        width: 100px;
+    }
+
+    .review-card{
+    	width: 200% !important;
+        margin: 2%;
+    }
+
+        .footer-section {
+        margin-left: -50%; /* Убираем левый отступ для всех секций */
+        text-align: center;
+        font-size: 13px;
+    }
+
+.footer-section.address {
+    position: absolute;
+    top: 264px;
+    right: 5%; /* Процент от ширины экрана */
+    text-align: center;
+}
+
+.footer-section.contact {
+    position: absolute;
+    top: 389px;
+    right: 17%; /* Устанавливаем отступ справа */
+    text-align: center;
+}
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Тёмный полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 16px; /* Закруглённые углы */
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Мягкая тень */
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* Анимация появления */
+}
+
+.modal-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-content label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea,
+.modal-content input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #555;
+}
+
+/* Анимация для модального окна */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
