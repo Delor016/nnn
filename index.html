@@ -1,0 +1,289 @@
+ <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Техпомощь на Дороге</title>
+        <meta name="description" content="Эвакуация автомобилей! Установка, ремонт и вскрытие замков. Замена масла, диагностика и качественные запчасти. Полный спектр автоуслуг с профессиональным подходом!" />
+
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon//favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./favicon//favicon-96x96.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="./favicon//web-app-manifest-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="./favicon//web-app-manifest-512x512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href="./favicon//apple-touch-icon.png">
+    <link rel="manifest" href="./favicon//site.webmanifest">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper">
+
+                <div class="header__wrapper">
+
+                    <div class="header__logo">
+                        <a href="file:///C:/Users/тру%20вайперр/Desktop/web333/web/web/index.html" class="header__logo-link">
+                            <img src="./img/svg/odigo-logo.svg" alt="РЕМОНТ АВТОМОБИЛЕЙ" class="header__logo-pic">
+                        </a>
+                    </div>
+                    <div class="header__second-image">
+                        <img src="./img/svg/second-image.png" alt="Второе изображение" class="header__second-image-pic">
+                    </div>
+                    <div class="header__text">
+                        <p class="header__text-content">
+                            <span class="highlight">5.0</span> на 
+                            <a href="https://yandex.ru/maps/-/CDXNu4PD" class="yandex-link" target="_blank">Яндексе</a>
+                        </p>
+                    </div>
+                    <nav class="header__nav"> 
+    <ul class="header__list">
+        <li class="header__item">
+            <a href="#why_me" class="header__link js-scroll">О нас</a>
+        </li>
+        <li class="header__item">
+            <a href="#catalog" class="header__link js-scroll">Каталог</a>
+        </li>
+        <li class="header__item">
+            <a href="#reviews" class="header__link js-scroll">Отзывы</a>
+        </li>
+    </ul>
+    <div class="header__contact-info">
+        <p class="header__phone">
+            <img src="./img/svg/phone.svg" alt="Телефон" class="header__icon">
+            <a href="javascript:void(0);" class="header__phone-link" id="phoneLink" onclick="copyToClipboard('+7 (920) 215-99-37', 'phoneLink')">+7 (920) 215-99-37</a>
+        </p>
+        <p class="header__address">
+            <img src="./img/svg/adress.svg" alt="Адрес" class="header__icon">
+            <a href="javascript:void(0);" id="addressLink" onclick="copyToClipboard('Революции, 22 с. Лосево', 'addressLink')">Революции, 22 с. Лосево</a>
+        </p>
+    </div> 
+    <div class="header__nav-close">
+        <span class = "header__nav-close-line"></span>
+        <span class = "header__nav-close-line"></span>
+    </div>
+</nav>
+
+                    <div class = "header__burger burger">
+                        <span class = "burger__line burger__line_first"></span>
+                        <span class = "burger__line burger__line_second"></span>
+                        <span class = "burger__line burger__line_third"></span>
+                    </div>              
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            
+            <div class="intro">
+                    <h1 class="intro__title">РЕМОНТ</br>АВТОМОБИЛЕЙ</h1>
+                    <p class="intro__subtitle">
+                        Услуги по установке, ремонту и вскрытию замков. Эвакуация автомобилей, компьютерная диагностика и всё остальное.
+                    </p>
+                    <a href="https://wapp.click/79202159937" class="intro__button" target="_blank">Связаться</a>
+                    <a href="#why_me" class="scroll-down js-scroll">
+    <img src="./img/svg/arrowDown.svg" alt="Стрелка вниз" width="55" height="55">
+</a>
+                </div>
+                <section class="about-us">
+        <div class="wrapper">
+
+            <h2 id="why_me" class="why-us"> ПОЧЕМУ <span class="underline">МЫ</span><span>?</span></h2>
+            <p id="imageCounter"><span class="#FF686">1</span>/7</p>
+            <div class="image-container">
+                <img id="imageDisplay" src="./img/photos/image2.png" alt="Image" />
+                <div class="arrow-container">
+                    <button id="prevButton" class="arrow">
+        <img src="./img/svg/LLL.svg" alt="Previous" />
+    </button>
+    <button id="nextButton" class="arrow">
+        <img src="./img/svg/RRR.svg" alt="Next" />
+    </button>
+                </div>
+            </div>
+
+            <div class="text-container">
+                <div class="text-item">
+                    <img src="./img/svg/about1.svg" alt="Иконка 1" class="icon">
+                    <p><span class="red-text">240+</span> оценок пользователей</p>
+                </div>
+                <div class="text-item">
+                    <img src="./img/svg/about2.svg" alt="Иконка 2" class="icon">
+                    <p><span class="red-text">6+</span> лет <br>на рынке</p>
+                </div>
+                <div class="text-item">
+                    <img src="./img/svg/about3.svg" alt="Иконка 3" class="icon">
+                    <p><span class="red-text">5.0</span> рейтинг<br> на Яндексе</p>
+                </div>
+            </div>
+            <h3 id="catalog" class="catalog-title"><span class="underline">КАТАЛОГ</span></h3>
+            <div class="catalog-container">
+        <div class="button-group">
+            <button class="catalog-button1 active" id="button1" data-category="oil-change">Замена масла</button>
+            <button class="catalog-button1" id="button2" data-category="diagnostics">Диагностика</button>
+            <button class="catalog-button1" id="button3" data-category="spare-parts">Запчасти</button>
+        </div>
+
+        <div class="catalog-cards">
+    
+    
+    <!-- Кнопки для добавления карточек в зависимости от категории -->
+<div class="add-card-buttons">
+        <button id="addOilChangeCardButton" class="add-card-button" style="display: none;">Добавить масло</button>
+        <button id="addDiagnosticsCardButton" class="add-card-button" style="display: none;">Добавить диагностику</button>
+        <button id="addSparePartsCardButton" class="add-card-button" style="display: none;">Добавить запчасть</button>
+        <!-- Кнопка "Выйти" для администратора -->
+<button id="logoutButton" style="display: none;">Выйти</button>
+</div>
+
+
+
+</div>
+
+<!-- Модальное окно для добавления карточки -->
+<div id="addCardModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Добавить новую карточку</h2>
+
+        <!-- Элемент для отображения текущей категории -->
+        <div id="modalCategoryInfo" style="font-weight: bold; color: #333; margin-bottom: 15px;"></div>
+
+        <label for="cardTitle">Название:</label>
+        <input type="text" id="cardTitle" placeholder="Введите название">
+
+        <label for="cardDescription">Описание:</label>
+        <textarea id="cardDescription" placeholder="Введите описание"></textarea>
+
+        <label for="cardImage">Выберите изображение:</label>
+        <input type="file" id="cardImage" accept="image/*"> <!-- Изменено на input type="file" -->
+
+        <label for="cardPrice">Цена:</label>
+        <input type="text" id="cardPrice" placeholder="Введите цену">
+
+        <button id="createCardButton">Создать карточку</button>
+    </div>
+</div>
+
+
+
+
+<div class="reviews-section">
+            <h2 id="reviews" class="reviews-title underline ">ОТЗЫВЫ</h2>
+        </div>
+<div class="reviews-container">
+    <div class="reviews-navigation">
+        <button id="prev" class="nav-button left">
+    <img src="./img/svg/LLL.svg" alt="Previous" />
+</button>
+    </div>
+
+    <div class="review-card">
+        <img src="./img/svg/otziv1.svg" alt="Аватар" class="review-avatar">
+        <div class="review-content">
+            <h4 class="review-name">Дмитрий П.</h4>
+            <img src="./img/svg/second-image.png" alt="5 звёзд" class="review-stars">
+            <p class="review-date">2 сентября</p>
+            <p class="review-text">Ребята оперативно помогли <br>с ремонтом авто, за что спасибо!</p>
+        </div>
+    </div>
+    <div class="review-card">
+        <img src="./img/svg/otziv2.svg" alt="Аватар" class="review-avatar">
+        <div class="review-content">
+            <h4 class="review-name">Андрей Кузьмин</h4>
+            <img src="./img/svg/second-image.png" alt="5 звёзд" class="review-stars">
+            <p class="review-date">23 августа</p>
+            <p class="review-text">Прекрасный сервис, быстро разобрались и починили (оторвалась щетка генератора) - рекомендую!</p>
+        </div>
+    </div>
+    <div class="review-card">
+        <img src="./img/svg/otziv3.svg" alt="Аватар" class="review-avatar">
+        <div class="review-content">
+            <h4 class="review-name">Иван</h4>
+            <img src="./img/svg/second-image.png" alt="5 звёзд" class="review-stars">
+            <p class="review-date">20 июля</p>
+            <p class="review-text">Лучшие в своём деле. Можно приезжать если ты даже из другого города.</p>
+        </div>
+    </div>
+    <div class="review-card">
+        <img src="./img/svg/otziv4.svg" alt="Аватар" class="review-avatar">
+        <div class="review-content">
+            <h4 class="review-name">Алексей Сизов</h4>
+            <img src="./img/svg/second-image.png" alt="5 звёзд" class="review-stars">
+            <p class="review-date">21 сентября</p>
+            <p class="review-text">Хорошие специалисты. Грамотные отзывчивые.</p>
+        </div>
+    </div>
+    <div class="review-card">
+        <img src="./img/svg/otziv5.svg" alt="Аватар" class="review-avatar">
+        <div class="review-content">
+            <h4 class="review-name">Александр Морозов</h4>
+            <img src="./img/svg/second-image.png" alt="5 звёзд" class="review-stars">
+            <p class="review-date">3 июля</p>
+            <p class="review-text">Хорошие и очень приветливые мастера. Оперативно и качественно устранили неисправность в моей машине.</p>
+        </div>
+    </div>
+    <div class="review-card">
+        <img src="./img/svg/otziv6.svg" alt="Аватар" class="review-avatar">
+        <div class="review-content">
+            <h4 class="review-name">Антон</h4>
+            <img src="./img/svg/second-image.png" alt="5 звёзд" class="review-stars">
+            <p class="review-date">20 июня</p>
+            <p class="review-text">Сломались по дороге. Ребята выручили. Спасибо вам огромное!!!</p>
+        </div>
+    </div>
+    <button id="next" class="nav-button right">
+    <img src="./img/svg/RRR.svg" alt="Next" />
+</button>
+
+
+</div> 
+</div>
+
+    
+    </div>
+    </section>
+                    </div>
+            </section>
+
+        </main>
+        <footer>
+    <div class="footer-content">
+        <h2 id="contacts" class="footer-header">КОНТАКТЫ</h2>
+        <div class="footer-section">
+            <h3 class="footer-title">График работы</h3>
+            <p class="footer-text">8.00 - 23.00 <br>без выходных</p>
+        </div>
+        <div class="footer-section address">
+            <h3 class="footer-title">Адрес</h3>
+            <p class="footer-text">просп. Революции, 22,<br> село Лосево</p>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Телефон</h3>
+            <p class="footer-phone">+7 (920) 215-99-37</p>
+        </div>
+        <div class="footer-section contact">
+            <h3 class="footer-title">Связь</h3>
+            <div class="footer-icons">
+    <a href="https://viber.click/89202159937" class="footer-icon-link">
+        <img src="./img/svg/WTSUP.svg" alt="whatsapp" class="footer-icon">
+    </a>
+    <a href="https://wapp.click/79202159937" class="footer-icon-link">
+        <img src="./img/svg/VIBER.svg" alt="viber" class="footer-icon">
+    </a>
+</div>
+        </div>
+        <div class="footer-map">
+            <div id="map" style="width: 100%; height: 250px;"></div>
+        </div>
+
+    </div>
+</footer>
+    
+    
+    <script src="script.js"></script>
+
+    </body>
+    </html>
